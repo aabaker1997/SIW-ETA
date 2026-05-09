@@ -22,10 +22,10 @@ import math, time, os, warnings
 warnings.filterwarnings("ignore")
 
 # ── Config ────────────────────────────────────────────────────────────────────
-DATA_DIR   = r"os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")"
+DATA_DIR   = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 INPUT_FILE = os.path.join(DATA_DIR, "allegheny_results.csv")
-SHP_DIR    = r"os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "shapefile")"
-OUTPUT_DIR = r"os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")\Turnout\contig"
+SHP_DIR    = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "shapefile")
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "Turnout", "contig")
 SHP_JOIN_COL = "Muni_War_1"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)

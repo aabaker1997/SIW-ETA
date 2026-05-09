@@ -47,10 +47,10 @@ WORKER_ID = int(sys.argv[1]) if len(sys.argv) > 1 else 0
 RNG_SEED  = 42 + 1_000_003 * WORKER_ID
 
 # ── Config ────────────────────────────────────────────────────────────────────
-DATA_DIR   = r"os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")"
+DATA_DIR   = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 INPUT_FILE = os.path.join(DATA_DIR, "allegheny_results.csv")
-SHP_DIR    = r"os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "shapefile")"
-BASE_OUTPUT_DIR = r"os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "randadj")"
+SHP_DIR    = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "shapefile")
+BASE_OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "randadj")
 SHP_JOIN_COL    = "Muni_War_1"
 
 OUTPUT_DIR = os.path.join(BASE_OUTPUT_DIR, f"worker_{WORKER_ID:02d}")

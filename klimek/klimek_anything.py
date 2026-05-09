@@ -760,7 +760,7 @@ def main():
     args = parser.parse_args()
 
     # --- Output subfolder ---
-    BASE_OUTPUT_DIR = r"D:\Klimek"
+    BASE_OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
     print(f"\nOutputs will be saved to: {BASE_OUTPUT_DIR}\\<SubfolderName>")
     while True:
         subfolder = input("Enter subfolder name for this run: ").strip()

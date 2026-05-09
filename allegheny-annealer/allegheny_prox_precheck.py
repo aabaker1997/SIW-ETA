@@ -28,9 +28,9 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # ── Config ────────────────────────────────────────────────────────────────────
-SHP_DIR    = r"os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "shapefile")"
-CSV_PATH   = r"os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")\allegheny_results.csv"
-OUTPUT_DIR = r"os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")"
+SHP_DIR    = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "shapefile")
+CSV_PATH   = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")\allegheny_results.csv
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
 SHP_JOIN_COL = "Muni_War_1"   # shapefile column to match against CSV "Precinct"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
